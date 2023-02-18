@@ -19,27 +19,38 @@ ul,li {
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container,.menu-area {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container,.menu-area {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container,.menu-area {
     max-width: 1140px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container,.menu-area {
     max-width: 1140px;
   }
 }
 
 @media (min-width:390px) and (max-width: 768px) {
+  .container{
+    width:340px !important;
+  }
+  .card-inner{
+    flex-direction: column;    
+  }
+  .card-box{
+    box-sizing: border-box;
+    width: 100% !important;
+    flex: 1;
+  }
   .navbar-wrap ul li a{
     padding: 10px 10px !important;
   }
@@ -54,18 +65,23 @@ ul,li {
     padding: 0 !important;
   }
 
-  .card-box{
-    min-width: 85% !important;
-    max-width: 85% !important;
-  }
+  
   .pricing-wrap{
     flex-direction: column;
   }
   .pricing-item .pricing__box__free{
     border: 1px solid rgb(150, 148, 146,0.5);
   }
-  .card-inner {
-    flex-direction: column;
+
+  .simplicity-btn{
+    margin:0 !important;
+    margin-left: 10px !important;
+  }
+  .banner-img img{
+    max-width: 100% !important;
+  }
+  .pricing-wrap{
+    padding-top: 0px !important;
   }
 }
 
@@ -277,6 +293,9 @@ ul,li {
 
 /* 卡片展示 */
 .card-inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bg-color-ly{
   background-color: #fbeacc;
@@ -291,8 +310,7 @@ ul,li {
   padding: 22px 22px;
   border-radius: 20px;
   text-align: center;
-  min-width: 25%;
-  max-width: 25%;
+  width: 25%;
 }
 .icon-card {
   display: flex;
