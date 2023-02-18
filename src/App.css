@@ -1,55 +1,341 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul,li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media (max-width: 769px) {
+  .home-banner-area .fullscreen {
+    height: 600px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/** 原子工具css **/
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.d-flex {
+  display: flex !important;
+}
+.col-lg-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.align-items-center {
+  align-items: center !important;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.justify-content-around{
+  justify-content: space-around
+}
+.m-l-20{
+  margin-left: 20px;
+}
+.m-l-10{
+  margin-left: 5px;
+}
+.m-r-10{
+  margin-right: 10px;
+}
+.m-b-50{
+  margin-bottom: 50px;
+}
+.m-t-20{
+  margin-top: 20px;
+}
+.ver-mid{
+  vertical-align:middle;
+}
+.text-left{
+  text-align: left;
+}
+.section-gap{
+  padding: 50px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ----顶部导航---- */
+.menu-area {
+	padding: 23px 120px;
 }
-.dropdown-content{
+.menu-nav {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.menu-logo img {
+	max-width: 150px;
+  max-height: 100px;
+}
+.navbar-wrap {
+	display: flex;
+	flex-grow: 1;
+}
+.header-line {
+  border-bottom: 1px solid rgb(179, 175, 171,0.5);
+}
+.navbar-wrap ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto 0;
+	padding: 0;
+}
+.navbar-wrap ul li {
+	list-style: none;
+	display: block;
+	position: relative;
+}
+.navbar-wrap ul li a {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: #777777;
+	padding: 38px 30px;
+	display: block;
+	line-height: 1;
+	position: relative;
+	transition: all 0.3s ease-out 0s;
+	text-decoration: none;
+	z-index: 1;
+  border-bottom: 1px solid transparent;
+}
+.navbar-wrap>ul>li:hover>a {
+	color: #e18917;
+  border-bottom: 1px solid #e18917;
+}
+
+
+/* 内容 */
+.icon{
+  width: 15px;
+  height: 15px;
+}
+.started-icon{
+  transform: translate(10px,-2px) rotate(270deg);
+
+}
+
+.icon-posi{
+  transform: translate(5px,-2px) ;
+}
+.container {
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.dropdown-content .toggle.collapsed:after{
-  content: '>';
-  font-style:normal;
-  transform: rotateY(45deg);
+.banner-content {
+  text-align: left;
 }
-.dropdown-content .toggle.expanded:after{
-  content: '<';
-  font-style:normal;
-  transform: rotateY(45deg);
-  
+.banner-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 66px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.react-dropdown-tree-select .dropdown .dropdown-trigger.arrow.bottom:after{
+.banner-content .me {
+  background: #90acd1;
+  padding: 18px;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  position: relative;
+}
+.banner-content .me:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  width: 0;
+  height: 0;
+  border-left: 26px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 24px solid #90acd1;
+}
+.banner-content .designation {
+  max-width: 390px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.banner-content .designation .designer {
+  color: #e45447;
+}
+.banner-content .designation .developer {
+  color: #90acd1;
+}
 
+/* button */
+.primary-btn {
+  color: #fff;
+  padding: 18px 36px;
+  background: rgba(238, 136, 61);
+  overflow: hidden;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 650;
+  display: inline-block;
+  border: 1px solid rgb(179, 175, 171,0.5);
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.simplicity-btn{
+  background: #fff;
+  color: #000;
+}
+.header-btn {
+  background-color: #1c2231;
+  padding: 18px 58px;
+}
+
+
+
+/* 关于我们 */
+.introduce{
+  font-size: 36px;
+}
+.about-arrow{
+  flex-grow: 0.2;
+    display: flex;
+    align-items: center;
+}
+
+/* 卡片展示 */
+.card-inner {
+}
+.bg-color-ly{
+  background-color: #fbeacc;
+}
+.bg-color-lb{
+  background-color: #b1ebfd;
+}
+.bg-color-lp{
+  background-color: #cfcffb;
+}
+.card-box{
+  padding: 22px 22px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 25%;
+  max-width: 25%;
+}
+
+
+.icon-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.icon-card img{
+  width: 25px;
+  height: 25px;
+}
+
+/* price */
+
+.pricing-wrap{
+  justify-content: center;
+}
+.pricing__box {
+	background: #fff;
+	border: 1px solid rgb(150, 148, 146,0.5);
+	border-radius: 10px;
+	padding: 35px 45px 45px;
+	transition: .3s linear;
+}
+.pricing__box__free{
+  border-right: none;
+  transform: translateY(30px);
+
+}
+.pricing-desc img{
+  margin-right: 20px;
+}
+.pricing__box__pro{
+  padding: 35px 45px 90px;
+}
+.pricing-item:hover .pricing__box {
+  border-color: #FAA432;
+}
+.pricing__box .pricing-hade > span {
+    color: rgb(34, 34, 34);
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0;
+}
+.pricing__box .pricing-hade .pro {
+  color: rgb(98, 18, 225);
+  font-size: 28px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0;
+}
+.pricing__box .pricing-hade .title {
+	font-size: 36px;
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+.pricing__box .pricing-hade .title .date {
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+.pricing__box .pricing-hade > p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
 }

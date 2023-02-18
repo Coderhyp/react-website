@@ -1,38 +1,21 @@
 import './App.css';
-import DropdownTreeSelect from 'react-dropdown-tree-select'
 import 'react-dropdown-tree-select/dist/styles.css'
-
-const data = {
-  label: 'search me',
-  value: 'searchme',
-  children: [
-    {
-      label: 'search me too',
-      value: 'searchmetoo',
-      children: [
-        {
-          label: 'No one can get me',
-          value: 'anonymous',
-        },
-      ],
-    },
-  ],
-}
-
-const onChange = (currentNode, selectedNodes) => {
-  console.log('onChange::', currentNode, selectedNodes)
-}
-const onAction = (node, action) => {
-  console.log('onAction::', action, node)
-}
-const onNodeToggle = currentNode => {
-  console.log('onNodeToggle::', currentNode)
-}
+import React from "react" 
+import About from './pages/about'
+import Cards from './pages/cards'
+import Header from './pages/header'
+import PriceCards from './pages/pricecards'
+import Guide from './pages/guide'
 
 function App() {
   return (
-    <div className="App">
-      <DropdownTreeSelect data={data} onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle} />
+    <div className='App'>
+      <Header></Header>
+      <Guide></Guide>
+      <About></About>
+      <Cards></Cards>
+      <About></About>
+      <PriceCards></PriceCards>
     </div>
   );
 }
