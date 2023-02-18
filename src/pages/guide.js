@@ -34,9 +34,9 @@ export default class Guide extends Component {
                       <img className="icon icon-posi ver-mid " src={startIcon}/>
                     </a>
                   </div>
-                  <div className="banner-img col-lg-6 col-md-6 align-self-end">
+                  <div className="banner-img ">
                     <img
-                      className="img-fluid"
+                      className=""
                       src={guideLeft}
                       alt="personal pic"
                     />

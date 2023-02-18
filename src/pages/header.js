@@ -42,7 +42,6 @@ export default class Header extends Component {
               </nav>
             </div>
             <div className="header-line"></div>
-
           </div>
         </div>
       </div>
